@@ -6,6 +6,7 @@ public class ShakeScript : MonoBehaviour
 {
 
     public float JitterLoc;
+    public float JitterAmplitude = 0.04f;
 
 
     // Start is called before the first frame update
@@ -17,7 +18,7 @@ public class ShakeScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        float y = Mathf.PingPong(Time.time, 0.04f) - JitterLoc;
+        float y = Mathf.PingPong(Time.time, JitterAmplitude) - JitterLoc;
         transform.position = new Vector3(transform.position.x, y, transform.position.z);
 
     }

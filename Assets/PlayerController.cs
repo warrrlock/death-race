@@ -75,7 +75,7 @@ public class PlayerController : MonoBehaviour
         int roundedSpeed = (int)currentSpeed;
 
         // Do something with the current speed value (e.g., print it)
-        speedCount.text = "Speed: " + roundedSpeed;
+        speedCount.text = roundedSpeed.ToString("000");
     }
 
     IEnumerator ActivateBoost() //boosts acceleration rate for set duration
